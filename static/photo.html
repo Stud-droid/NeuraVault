@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>NeuraVault — Photo</title>
+<link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<nav>
+  <div class="nav-logo">Neura<span class="dot">●</span>Vault</div>
+</nav>
+
+<div class="main-shell">
+
+  <div class="detail-grid">
+
+    <div class="detail-img-wrap">
+      <img id="photo-img" src=""/>
+    </div>
+
+    <div class="detail-sidebar">
+
+      <div class="detail-panel">
+        <h1 class="detail-title" id="photo-title">Photo</h1>
+
+        <div class="meta-row">
+          <span class="meta-key">Caption</span>
+          <span id="photo-caption">—</span>
+        </div>
+
+        <div class="meta-row">
+          <span class="meta-key">Location</span>
+          <span id="photo-location">—</span>
+        </div>
+
+        <div class="meta-row">
+          <span class="meta-key">People</span>
+          <span id="photo-people">—</span>
+        </div>
+
+      </div>
+
+      <div class="detail-panel">
+        <div class="form-group">
+          <label>Comment</label>
+          <textarea class="form-control" id="comment-text"></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-full" id="comment-btn" onclick="submitComment()">
+          <span id="comment-btn-txt">Post Comment</span>
+          <span id="comment-ld" style="display:none"></span>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="/static/js/auth.js"></script>
+<script src="/static/js/consumer.js"></script>
+</body>
+</html>

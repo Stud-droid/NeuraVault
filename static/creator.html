@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>NeuraVault — Creator Studio</title>
+<link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<nav>
+  <div class="nav-logo">Neura<span class="dot">●</span>Vault</div>
+  <div class="nav-right">
+    <span id="nav-user"></span>
+    <button class="btn btn-outline" onclick="doLogout()">Sign Out</button>
+  </div>
+</nav>
+
+<div class="dashboard-shell">
+
+  <div class="top-tabs">
+    <div class="tab-pill active">Upload</div>
+    <div class="tab-pill">Gallery</div>
+    <div class="tab-pill">Analytics</div>
+  </div>
+
+  <div class="upload-layout">
+
+    <div class="upload-card">
+      <div class="upload-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+        <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp,image/gif" onchange="handleFile(event)"/>
+        <div class="upload-icon">📸</div>
+        <div class="upload-title">Drop your image here</div>
+        <div class="upload-sub">JPG PNG WEBP GIF</div>
+      </div>
+
+      <div class="preview-wrap" id="preview-wrap">
+        <img id="preview-img" src=""/>
+      </div>
+    </div>
+
+    <div class="glass-card" style="padding:30px">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" id="u-title"/>
+      </div>
+
+      <div class="form-group">
+        <label>Caption</label>
+        <textarea class="form-control" id="u-caption"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Location</label>
+        <input class="form-control" type="text" id="u-location"/>
+      </div>
+
+      <div class="form-group">
+        <label>People Present</label>
+        <input class="form-control" type="text" id="u-people"/>
+      </div>
+
+      <div class="alert alert-error" id="upload-err"></div>
+      <div class="alert alert-success" id="upload-ok"></div>
+
+      <button class="btn btn-primary btn-full" id="upload-btn" onclick="uploadPhoto()">
+        <span id="upload-btn-txt">Upload to Vault</span>
+        <span id="upload-ld" style="display:none"></span>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/js/auth.js"></script>
+<script src="/static/js/creator.js"></script>
+</body>
+</html>
