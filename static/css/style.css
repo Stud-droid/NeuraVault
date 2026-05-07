@@ -1,0 +1,136 @@
+
+/* ===================================
+   NEURAVAULT UI OVERRIDE (SAFE)
+   Keeps ALL backend functionality intact
+=================================== */
+
+:root{
+  --primary:#7c3aed;
+  --secondary:#06b6d4;
+  --bg:#060816;
+  --panel:rgba(15,23,42,.78);
+  --border:rgba(255,255,255,.08);
+  --text:#f8fafc;
+  --muted:#94a3b8;
+}
+
+body{
+  background:
+    radial-gradient(circle at top left,#172554 0%,#060816 45%),
+    linear-gradient(to bottom,#060816,#0b1020)!important;
+  color:var(--text)!important;
+  font-family:Inter,Segoe UI,sans-serif!important;
+}
+
+.bg-grid{
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:40px 40px;
+  z-index:-1;
+}
+
+nav{
+  background:rgba(8,12,24,.72)!important;
+  backdrop-filter:blur(20px)!important;
+  border-bottom:1px solid rgba(255,255,255,.06)!important;
+}
+
+.nav-logo{
+  font-size:1.6rem!important;
+  font-weight:900!important;
+}
+
+.dot{
+  color:var(--secondary)!important;
+}
+
+.login-card,
+.main-area,
+.sidebar,
+.detail-panel,
+.photo-card,
+.modal,
+.stat-card{
+  background:var(--panel)!important;
+  border:1px solid var(--border)!important;
+  backdrop-filter:blur(20px)!important;
+  border-radius:24px!important;
+  box-shadow:0 20px 60px rgba(0,0,0,.35)!important;
+}
+
+.form-control,
+.search-input{
+  background:rgba(255,255,255,.04)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  border-radius:18px!important;
+  color:white!important;
+  padding:16px 18px!important;
+}
+
+.form-control:focus,
+.search-input:focus{
+  border-color:var(--primary)!important;
+  box-shadow:0 0 0 4px rgba(124,58,237,.15)!important;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--primary),var(--secondary))!important;
+  border:none!important;
+  border-radius:18px!important;
+  color:white!important;
+}
+
+.btn-outline,
+.btn-ghost{
+  background:rgba(255,255,255,.04)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  border-radius:18px!important;
+  color:white!important;
+}
+
+.upload-zone{
+  background:rgba(255,255,255,.03)!important;
+  border:2px dashed rgba(124,58,237,.35)!important;
+  border-radius:28px!important;
+}
+
+.photo-card:hover{
+  transform:translateY(-6px)!important;
+}
+
+.page-title .accent{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.search-wrap{
+  background:rgba(255,255,255,.04)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  border-radius:20px!important;
+  padding:10px!important;
+}
+
+.feature-item{
+  background:rgba(255,255,255,.03)!important;
+  border-radius:18px!important;
+  padding:14px!important;
+}
+
+.alert-error{
+  background:rgba(239,68,68,.12)!important;
+}
+
+.alert-success{
+  background:rgba(16,185,129,.12)!important;
+}
+
+@media(max-width:900px){
+  .dashboard-layout,
+  .detail-grid{
+    grid-template-columns:1fr!important;
+  }
+}
